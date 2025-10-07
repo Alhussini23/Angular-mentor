@@ -1,0 +1,124 @@
+<div class="container-fluid bg-dark text-white p-2 p-md-5" style="min-height: 100vh;">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2 class="text-success border-bottom border-secondary pb-2">
+                <i class="bi bi-speedometer2 me-2"></i> Dashboard Overview
+            </h2>
+            <p class="text-muted small">Welcome back, Admin. Here's a summary of your platform's performance.</p>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-lg border-primary h-100 py-2" style="background-color: #212529;">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Total Courses
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-white">{{sharedValue()}}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-book-open fa-2x text-secondary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-lg border-success h-100 py-2" style="background-color: #212529;">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Active Instructors
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-white">22</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-chalkboard-teacher fa-2x text-secondary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-lg border-info h-100 py-2" style="background-color: #212529;">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Total Students
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-white">4,500</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-user-graduate fa-2x text-secondary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-lg border-warning h-100 py-2" style="background-color: #212529;">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Monthly Revenue
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-white">$12,500</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-dollar-sign fa-2x text-secondary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-8 mb-4">
+            <div class="card shadow-lg h-100" style="background-color: #212529;">
+                <div class="card-header py-3 border-secondary">
+                    <h6 class="m-0 font-weight-bold text-primary">New Student Growth (Last 6 Months)</h6>
+                </div>
+                <div class="card-body">
+                    <div class="chart-area p-3 rounded" style="height: 350px; background-color: #1e2225; display: flex; align-items: center; justify-content: center; border: 1px dashed #343a40;">
+                       <p class="text-muted text-center small">Static Placeholder for Student Growth Chart</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow-lg h-100" style="background-color: #212529;">
+                <div class="card-header py-3 border-secondary">
+                    <h6 class="m-0 font-weight-bold text-success">Top 5 Instructors</h6>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #212529; color: #f8f9fa;">
+                            Ahmad Ali <span class="badge bg-primary rounded-pill">3 Courses</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #212529; color: #f8f9fa;">
+                            Fatima Mohammad <span class="badge bg-primary rounded-pill">2 Courses</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #212529; color: #f8f9fa;">
+                            Khaled Ibrahim <span class="badge bg-primary rounded-pill">3 Courses</span>
+                        </li>
+
+                    </ul>
+                    <a href="#" class="btn btn-sm btn-success mt-3 w-100 py-2">View All Instructors <i class="bi bi-arrow-right-short"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<!-- Courses Section -->
+<section id="courses" class="courses section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Courses</h2>
+    <p>Popular Courses</p>
+  </div><!-- End Section Title -->
+  <div class="container">
+    <div class="row">
+      @for (item of courseslist; track $index) {
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+          <div class="course-item rounded-top-5">
+            <img [src]="item.img" class="img-fluid rounded-5"  alt="...">
+            <div class="course-content">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <p class="category">{{item.category}}</p>
+                <p class="price">${{item.price}}</p>
+              </div>
+
+              <h3><a href="course-details.html">{{item.name}}</a></h3>
+              <p class="description">{{item.description}}</p>
+
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section><!-- /Courses Section -->

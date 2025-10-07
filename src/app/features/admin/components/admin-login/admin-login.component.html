@@ -1,0 +1,77 @@
+<div class="container-fluid bg-dark text-white p-2 p-md-5" style="min-height: 100vh;">
+  <div class="row justify-content-center gx-0">
+    <div class="col-12 col-md-8 col-lg-5 mt-5">
+      <div class="card shadow-lg border-success" style="background-color: #212529;">
+
+        <div class="card-body">
+          <h5 class="card-title text-success border-bottom border-success pb-2 mb-4 text-center">
+            <i class="bi bi-key-fill me-2"></i> Admin Login
+          </h5>
+          <p class="text-muted text-center small mb-4">Control Panel Access</p>
+
+          <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+
+            @if (errorMessage) {
+              <div class="alert alert-danger text-center" role="alert">
+                {{ errorMessage }}
+              </div>
+            }
+
+            <div class="mb-3">
+              <label for="inputUsername" class="form-label text-light">Username <span class="text-danger">*</span></label>
+              <input
+                class="form-control bg-dark text-white border-secondary"
+                id="inputUsername"
+                type="text"
+                placeholder="Enter username"
+                name="username"
+                [(ngModel)]="username"
+                #usernameControl="ngModel"
+                required
+              />
+              @if (usernameControl.invalid && (usernameControl.dirty || usernameControl.touched)) {
+                <div class="text-danger small mt-1">
+                  Username is required.
+                </div>
+              }
+            </div>
+
+            <div class="mb-4">
+              <label for="inputPassword" class="form-label text-light">Password <span class="text-danger">*</span></label>
+              <input
+                class="form-control bg-dark text-white border-secondary"
+                id="inputPassword"
+                type="password"
+                placeholder="Enter password"
+                name="password"
+                [(ngModel)]="password"
+                #passwordControl="ngModel"
+                required
+              />
+              @if (passwordControl.invalid && (passwordControl.dirty || passwordControl.touched)) {
+                <div class="text-danger small mt-1">
+                  Password is required.
+                </div>
+              }
+            </div>
+
+            <hr class="border-secondary my-4">
+
+            <div class="d-grid gap-2">
+              <button
+                type="submit"
+                class="btn btn-success w-100 py-2"
+                [disabled]="!loginForm.valid">
+                <i class="bi bi-box-arrow-in-right me-2"></i> Log In
+              </button>
+            </div>
+
+          </form>
+        </div>
+        <div class="card-footer text-center py-3 text-muted" style="background-color: #212529;">
+          Access reserved for administrators only
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

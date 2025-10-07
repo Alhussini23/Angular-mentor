@@ -1,0 +1,98 @@
+<div class="w-100 bg-dark text-white p-2 p-md-5" style="min-height: 100vh;">
+  <div class="row justify-content-center gx-0">
+    <div class="col-12 col-md-12 col-lg-7 mt-5">
+      <div class="card shadow-lg border-success" style="background-color: #212529;">
+
+        <div class="card-body px-0 p-md-3">
+          <h5 class="card-title text-success border-bottom border-success pb-2 mb-4 px-3 px-md-0">
+            <i class="bi bi-plus-square me-2"></i> Add New Course Details
+          </h5>
+
+          <form [formGroup]="courseform" class="px-3 px-md-0">
+            <div class="mb-3">
+              <label for="courseName" class="form-label text-light">Course Title <span
+                  class="text-danger">*</span></label>
+              <input type="text" id="courseName" name="courseName" formControlName="name"
+                class="form-control text-white border-secondary bg-dark">
+
+              @if (controles['name'].touched && (controles['name'].invalid || controles['name'].dirty) ) {
+
+              @if (controles['name'].errors?.['required'] || controles['name'].errors?.['maxlength'] ||
+              controles['name'].errors?.['minlength'] || controles['name'].errors?.['pattern'] ) {
+              <span class="text-danger">Please enter 3 to 50 letters (A-Z) and spaces</span>
+              }
+              }
+            </div>
+
+            <div class="mb-3">
+              <label for="coursePrice" class="form-label text-light">Price (USD) <span
+                  class="text-danger">*</span></label>
+              <input type="number" id="coursePrice" name="coursePrice" formControlName="price"
+                class="form-control bg-dark text-white border-secondary" placeholder="e.g., 250">
+
+              @if (controles['price'].touched && (controles['price'].invalid || controles['price'].dirty) ) {
+
+              @if (controles['price'].errors?.['required'] ) {
+              <span class="text-danger">Please fill us in from (1 to 9)</span>
+              }
+              }
+            </div>
+            <div class="mb-3">
+              <label for="courseTag" class="form-label text-light">Category Tag <span
+                  class="text-danger">*</span></label>
+              <input type="text" id="courseTag" name="courseTag" formControlName="category"
+                class="form-control bg-dark text-white border-secondary">
+              @if (controles['category'].touched && (controles['category'].invalid || controles['category'].dirty) ) {
+
+              @if (controles['category'].errors?.['required'] || controles['category'].errors?.['maxlength'] ||
+              controles['category'].errors?.['minlength'] || controles['category'].errors?.['pattern'] ) {
+              <span class="text-danger">Please enter 3 to 50 letters (A-Z) and spaces</span>
+              }
+              }
+            </div>
+
+
+            <div class="mb-3">
+              <label for="courseDetails" class="form-label text-light">Course Description <span
+                  class="text-danger">*</span></label>
+              <input type="text" id="courseDetails" name="courseDetails"
+                class="form-control bg-dark text-white border-secondary" formControlName="description">
+              @if (controles['description'].touched && (controles['description'].invalid ||
+              controles['description'].dirty) ) {
+
+              @if (controles['description'].errors?.['required'] || controles['description'].errors?.['maxlength'] ||
+              controles['description'].errors?.['minlength'] ) {
+              <span class="text-danger">Please enter 20 to 500 letters (A-Z) and spaces and code</span>
+              }
+              }
+            </div>
+
+            <div class="mb-3">
+              <label for="courseImage" class="form-label text-light">Course Main Image Upload <span
+                  class="text-danger">*</span></label>
+              <input type="file" id="courseImage" name="courseImage" accept="image/*"
+                class="form-control bg-dark text-white border-secondary" (change)="handleFileChange($event)"
+                formControlName="img">
+              @if (controles['img'].touched && (controles['img'].invalid || controles['img'].dirty) ) {
+
+              @if (controles['img'].errors?.['required'] ) {
+              <span class="text-danger">Please upload an image</span>
+              }
+              }
+            </div>
+
+            @if(courseform.invalid){
+            <button type="submit" class="btn btn-success w-100 py-2" [disabled]="courseform.invalid">
+              <i class="bi bi-upload me-2"></i> Submit New Course
+            </button>
+            }@else {
+            <button type="submit" class="btn btn-success w-100 py-2" (click)="onSupmit()">
+              <i class="bi bi-upload me-2"></i> Submit New Course
+            </button>
+            }
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
