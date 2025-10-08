@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, Signal, signal } from '@angular/core';
-import { CoursesListComponent } from '../../features/admin/components/courses/courses-list/courses-list.component';
 
 
 @Injectable({

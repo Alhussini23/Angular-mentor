@@ -11,7 +11,7 @@ export class AuthService {
   private isLoggedIn: boolean = localStorage.getItem(AUTH_KEY) === 'true';
 
   private readonly ADMIN_USERNAME = 'alhussini-23';
-  private readonly ADMIN_PASSWORD = '2003';
+  private readonly ADMIN_PASSWORD = '2002';
 
   constructor() { }
 

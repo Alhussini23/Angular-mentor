@@ -13,10 +13,8 @@ export class SpinnerService {
   }
   hide() {
     setTimeout(() => {
-      /** spinner ends after 5 seconds */
+
         this.spinnerServer.hide();
       }, 2000);
-
-    // this.spinnerServer.hide();
   }
 }
